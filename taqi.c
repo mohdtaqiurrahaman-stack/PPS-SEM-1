@@ -1,15 +1,25 @@
 #include <stdio.h>
 
-int main()
+void main()
 {
-    int a,b;
-    a=1;
-    b=77;
+    int n, i, j, count;
 
-    printf("%d\n", a > b);
-    printf("%d\n", a < b);
-    printf("%d\n", a == b);
-    printf("%d\n", a != b);
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
 
-    return 0;
+    printf("Prime numbers from 1 to %d are:\n", n);
+
+    for (i = 2; i <= n; i++)
+    {
+        count = 0;
+
+        for (j = 1; j <= i; j++)
+        {
+            if (i % j == 0)
+                count++;
+        }
+
+        if (count == 2)
+            printf("%d ", i);
+    }
 }
