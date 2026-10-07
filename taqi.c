@@ -1,25 +1,16 @@
-#include <stdio.h>
-
-void main()
+#include<stdio>
+void main ()
 {
-    int n, i, j, count;
+     int deci,bin,i=1,rem;
+     printf("enter the number in binary (0s and 1s");
+     scanf("%d",&deci);
+     while (deci!=0)
 
-    printf("Enter the value of n: ");
-    scanf("%d", &n);
-
-    printf("Prime numbers from 1 to %d are:\n", n);
-
-    for (i = 2; i <= n; i++)
-    {
-        count = 0;
-
-        for (j = 1; j <= i; j++)
-        {
-            if (i % j == 0)
-                count++;
-        }
-
-        if (count == 2)
-            printf("%d ", i);
-    }
+     {
+        rem=deci%2;
+     bin=bin+rem*1;
+     i=i*10;
+     deci=deci/2
+     }
+     printf("%d",bin)
 }
